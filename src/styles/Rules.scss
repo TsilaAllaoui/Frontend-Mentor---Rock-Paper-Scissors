@@ -1,0 +1,37 @@
+#rules {
+  position: absolute;
+  top: 50%;
+  width: 400px;
+  height: 420px;
+  background-color: white;
+  transform: translateY(-45%);
+  border-radius: 0.5rem;
+  z-index: 6;
+  //   display: none;
+
+  #heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: rgb(23, 35, 61);
+    font-family: "BarlowSemiCondensed Bold";
+    font-size: 2rem;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      transition: all 500ms;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  #rules-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
