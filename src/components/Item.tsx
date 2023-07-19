@@ -1,6 +1,17 @@
 import "../styles/Item.scss";
+import paper from "../assets/images/icon-paper.svg";
+import scissor from "../assets/images/icon-scissors.svg";
+import rock from "../assets/images/icon-rock.svg";
+import GameContext from "../contexts/userChoiceContext";
+import { useContext } from "react";
 
-const Item = ({ image, type }: { image: string; type: string }) => {
+const Item = ({
+  type,
+  scaleFactor,
+}: {
+  type: string;
+  scaleFactor?: number;
+}) => {
   const r1 = "rgb(255,54,84)";
   const r2 = "rgb(156,22,49)";
 
@@ -10,8 +21,22 @@ const Item = ({ image, type }: { image: string; type: string }) => {
   const b1 = "rgb(70,101,244)";
   const b2 = "rgb(39,67,192)";
 
+  const GameCtx = useContext(GameContext);
+
   return (
-    <div className="item">
+    <div
+      className="item"
+      style={{
+        transform: `scale(${
+          scaleFactor === undefined ? "1" : scaleFactor.toString()
+        })`,
+      }}
+      onClick={() => {
+        console.log(GameCtx.gameStatusState);
+        GameCtx.choiceSetter(type);
+        GameCtx.gameStatusSetter(!GameCtx.gameStatusState);
+      }}
+    >
       <div
         className="circle-1"
         style={{
@@ -30,7 +55,10 @@ const Item = ({ image, type }: { image: string; type: string }) => {
         ></div>
         <div className="circle-4" style={{ backgroundColor: "white" }}></div>
       </div>
-      <img src={image} alt={image} />
+      <img
+        src={type == "paper" ? paper : type == "scissor" ? scissor : rock}
+        alt={type + "-image"}
+      />
     </div>
   );
 };

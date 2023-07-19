@@ -1,0 +1,24 @@
+#battle {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 1rem;
+    font-size: 1.75rem;
+    font-family: "BarlowSemiCondensed Medium";
+    color: rgb(217, 211, 211);
+  }
+
+  #left,
+  #right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
