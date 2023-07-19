@@ -1,0 +1,37 @@
+#score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  height: 15%;
+  border: solid 3px rgba(255, 255, 255, 0.474);
+  border-radius: 0.75rem;
+  padding: 1rem;
+
+  #score-info {
+    width: 9rem;
+    height: 7rem;
+    color: rgb(23, 32, 65);
+    font-family: "BarlowSemiCondensed Bold";
+    background-color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      margin: 0;
+
+      &:first-of-type {
+        font-family: "BarlowSemiCondensed Medium";
+        font-size: 1rem;
+      }
+
+      &:last-of-type {
+        font-size: 3rem;
+        color: rgb(74, 73, 73);
+      }
+    }
+  }
+}

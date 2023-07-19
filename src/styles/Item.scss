@@ -1,0 +1,61 @@
+.item {
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+  //   margin: 0 4rem;
+
+  img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+  }
+
+  .circle-1 {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .circle-2 {
+    background-color: yellow;
+    height: 96%;
+    width: 100%;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    .circle-3 {
+      background-color: green;
+      height: 80%;
+      width: 80%;
+      border-radius: 100%;
+      position: absolute;
+      z-index: 3;
+      overflow-y: hidden;
+    }
+
+    .circle-4 {
+      background-color: blue;
+      height: 75%;
+      width: 80%;
+      border-radius: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 1.75rem;
+      z-index: 4;
+    }
+  }
+}

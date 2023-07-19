@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "BarlowSemiCondensed Regular";
+  src: url("../fonts/BarlowSemiCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed Medium";
+  src: url("../fonts/BarlowSemiCondensed-Medium.ttf");
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensed Bold";
+  src: url("../fonts/BarlowSemiCondensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Sugo Pro Regular";
+  src: url("../fonts/Sugo-Pro-Classic-Regular-trial.ttf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: #242424;
+  margin: 0;
+  padding: 0;
+  height: 100svh;
+  width: 100svw;
+}

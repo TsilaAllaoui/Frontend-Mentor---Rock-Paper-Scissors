@@ -1,0 +1,48 @@
+#choose {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #horizontal-line {
+      height: 1rem;
+      width: 8%;
+      background-color: rgb(23, 35, 61);
+    }
+  }
+
+  #lower {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    #oblic-line-1,
+    #oblic-line-2 {
+      height: 1rem;
+      width: 15%;
+      background-color: rgb(23, 35, 61);
+    }
+
+    #oblic-line-1 {
+      transform: translate(8rem, -2rem) rotate(55deg);
+
+      @media (max-width: 710px) {
+        transform: translate(6rem, -2rem) rotate(55deg);
+      }
+    }
+
+    #oblic-line-2 {
+      transform: translate(-8rem, -2rem) rotate(-55deg);
+
+      @media (max-width: 710px) {
+        transform: translate(-6rem, -2rem) rotate(-55deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+#app {
+  height: 100svh;
+  width: 100svw;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    rgb(23, 32, 65),
+    rgb(17, 52, 107) 40% 60%,
+    rgb(23, 32, 65)
+  );
+  font-family: "BarlowSemiCondensed Regular";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  #rules-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 5%;
+    height: 3rem;
+    padding: 0 3rem;
+    border: solid 3px rgba(255, 255, 255, 0.474);
+    border-radius: 0.75rem;
+    background-color: transparent;
+    color: white;
+    font-family: "BarlowSemiCondensed Bold";
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    transition: all 500ms;
+
+    &:hover {
+      border: solid 3px white;
+      transform: scale(1.1);
+    }
+  }
+}
