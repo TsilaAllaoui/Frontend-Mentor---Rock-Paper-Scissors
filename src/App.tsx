@@ -23,8 +23,6 @@ function App() {
     rules.style.display = "block";
   };
 
-  const choices = ["paper", "scissor", "rock"];
-
   useEffect(() => {
     if (userChoice == "paper") {
       if (houseChoice == "paper") {
@@ -63,8 +61,6 @@ function App() {
 
   useEffect(() => {
     if (!isChoosing) {
-      console.log("Choice/HouseChoice : " + userChoice + "/" + houseChoice);
-
       if (userChoice == houseChoice)
         return;
 
