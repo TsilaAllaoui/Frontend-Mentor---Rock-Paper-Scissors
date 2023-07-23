@@ -8,6 +8,7 @@
   border-radius: 0.5rem;
   z-index: 6;
   display: none;
+  animation: fadein 250ms linear forwards, slide 250ms ease-in-out forwards;
 
   #heading {
     display: flex;
@@ -33,5 +34,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 430px) {
+    height: 100svh;
+    width: 100svw;
+    border-radius: 0;
+    transform: none;
+    top: 0;
+    left: 0;
+
+    #heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        position: absolute;
+        bottom: 2rem;
+      }
+    }
+
+    #rules-image {
+      height: 75%;
+    }
   }
 }

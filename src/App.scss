@@ -1,19 +1,38 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 #app {
   height: 100svh;
   width: 100svw;
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    to right,
-    rgb(23, 32, 65),
-    rgb(17, 52, 107) 40% 60%,
-    rgb(23, 32, 65)
-  );
+  background: linear-gradient(to right,
+      rgb(23, 32, 65),
+      rgb(17, 52, 107) 40% 60%,
+      rgb(23, 32, 65));
   font-family: "BarlowSemiCondensed Regular";
   display: flex;
   flex-direction: column;
   gap: 12%;
   align-items: center;
+  overflow: hidden;
 
   #rules-button {
     position: absolute;
@@ -33,6 +52,27 @@
     &:hover {
       border: solid 3px white;
       transform: scale(1.1);
+    }
+  }
+
+  #rules-container {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+  }
+
+  @media (max-width: 430px) {
+    #rules-button {
+      position: fixed;
+      left: 50%;
+      bottom: 2rem;
+      height: 3rem;
+      transform: translateX(-50%);
     }
   }
 }

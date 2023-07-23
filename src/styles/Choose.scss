@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadein 750ms linear forwards;
 
   #upper {
     display: flex;
@@ -43,6 +44,39 @@
 
       @media (max-width: 710px) {
         transform: translate(-6rem, -2rem) rotate(-55deg);
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    .item {
+      scale: 0.75;
+    }
+
+    #upper {
+      #horizontal-line {
+        position: absolute;
+        width: 50%;
+      }
+    }
+
+    #lower {
+
+      margin: 0;
+
+      #oblic-line-1 {
+        width: 50%;
+        transform: translate(5rem, -2rem) rotate(55deg);
+      }
+
+      #oblic-line-2 {
+        width: 50%;
+        transform: translate(-5rem, -2rem) rotate(-55deg);
+      }
+
+      #rock {
+        transform: translateY(-1.75rem);
+        z-index: 2;
       }
     }
   }

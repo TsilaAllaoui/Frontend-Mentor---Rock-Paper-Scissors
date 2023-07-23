@@ -5,7 +5,12 @@ import close from "../assets/images/icon-close.svg";
 const Rules = () => {
   const closeRules = () => {
     const rules = document.querySelector("#rules") as HTMLDialogElement;
+    const rulesContainer = document.querySelector("#rules-container") as HTMLDivElement;
+    rulesContainer.style.backdropFilter = "unset";
     rules.style.display = "none";
+    rules.style.zIndex = "0";
+    rulesContainer.style.zIndex = "-1";
+    rulesContainer.style.height = "90%";
   };
   return (
     <div id="rules">

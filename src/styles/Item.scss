@@ -3,6 +3,9 @@
   height: 12rem;
   position: relative;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     position: absolute;
@@ -15,6 +18,34 @@
     width: 30%;
   }
 
+  #outer-circle-1 {
+    background-color: white;
+    opacity: 0.1;
+    height: 140%;
+    width: 140%;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 2;
+  }
+
+  #outer-circle-2 {
+    background-color: white;
+    opacity: 0.05;
+    height: 180%;
+    width: 180%;
+    position: absolute;
+    border-radius: 100%;
+  }
+
+  #outer-circle-3 {
+    background-color: white;
+    opacity: 0.025;
+    height: 220%;
+    width: 220%;
+    position: absolute;
+    border-radius: 100%;
+  }
+
   .circle-1 {
     background-color: red;
     height: 100%;
@@ -23,6 +54,7 @@
     position: absolute;
     z-index: 1;
   }
+
   .circle-2 {
     background-color: yellow;
     height: 96%;

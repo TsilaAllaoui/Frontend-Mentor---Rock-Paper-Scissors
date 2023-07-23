@@ -35,4 +35,18 @@
       }
     }
   }
+
+  @media (max-width: 430px) {
+    width: 75%;
+    height: 4rem;
+
+    img {
+      height: 2.5rem;
+    }
+
+    #score-info {
+      width: 6rem;
+      height: 5rem;
+    }
+  }
 }
